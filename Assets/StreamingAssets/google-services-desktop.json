@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "254420847317",
+    "firebase_url": "https://gamedev-ui-42f16-default-rtdb.firebaseio.com/",
+    "project_id": "gamedev-ui-42f16",
+    "storage_bucket": "gamedev-ui-42f16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254420847317:android:97dd1d729c520f10af705c",
+        "android_client_info": {
+          "package_name": "Com.plv.gamedevui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254420847317-47etmov3jd8tp5tf64b1pb201oh3mi0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNdkL23a33lr1AqJlgYxc_5bGTxjLojlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254420847317-47etmov3jd8tp5tf64b1pb201oh3mi0i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
