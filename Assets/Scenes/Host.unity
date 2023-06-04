@@ -335,7 +335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -101.00003, y: 32}
+  m_AnchoredPosition: {x: -101, y: 32}
   m_SizeDelta: {x: -757.24, y: -369.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31889449
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.2
+  m_fontSize: 19.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -471,7 +471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -101.00003, y: -13.940002}
+  m_AnchoredPosition: {x: -101, y: -13.940002}
   m_SizeDelta: {x: -757.24, y: -368.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90629798
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.5
+  m_fontSize: 20.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -827,8 +827,9 @@ GameObject:
   - component: {fileID: 238451639}
   - component: {fileID: 238451638}
   - component: {fileID: 238451641}
+  - component: {fileID: 238451642}
   m_Layer: 5
-  m_Name: Enter (1)
+  m_Name: Join room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -899,9 +900,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 238451641}
-        m_TargetAssemblyTypeName: Signup, Assembly-CSharp
-        m_MethodName: enter
+      - m_Target: {fileID: 1328003297}
+        m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
+        m_MethodName: JoinRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -961,6 +962,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6595c6058f3549b7f95447b6f2e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &238451642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238451636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6d64b8f78c3ea44a15083ee951746e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crText: {fileID: 0}
+  jrText: {fileID: 0}
 --- !u!1 &267242843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,6 +1934,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &1328003296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328003298}
+  - component: {fileID: 1328003297}
+  m_Layer: 0
+  m_Name: LobbyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1328003297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328003296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6d64b8f78c3ea44a15083ee951746e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crText: {fileID: 352650660}
+  jrText: {fileID: 8013709}
+--- !u!4 &1328003298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328003296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.83033127, y: 1.142805, z: 0.12914234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524071124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,8 +2547,9 @@ GameObject:
   - component: {fileID: 1986363575}
   - component: {fileID: 1986363574}
   - component: {fileID: 1986363577}
+  - component: {fileID: 1986363578}
   m_Layer: 5
-  m_Name: Enter
+  m_Name: create room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2558,9 +2620,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1986363577}
-        m_TargetAssemblyTypeName: Signup, Assembly-CSharp
-        m_MethodName: enter
+      - m_Target: {fileID: 1328003297}
+        m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
+        m_MethodName: CreateRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2620,3 +2682,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6595c6058f3549b7f95447b6f2e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1986363578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986363572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6d64b8f78c3ea44a15083ee951746e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crText: {fileID: 0}
+  jrText: {fileID: 0}
